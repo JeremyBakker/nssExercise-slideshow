@@ -9,6 +9,10 @@ body{
 	margin: 0 auto;
 }
 
+#apod_title {
+	color: white;
+}
+
 #apod_img_id {
 	height: 550px;
 	width: 550px;
