@@ -35,8 +35,8 @@ $(document).ready(function() {
             MM = MM;
         }
         dateArray.push(YYYY + "-" + MM + "-" + DD);
-        $("#apod_img_id").fadeToggle();
         grabImage();
+        $("#apod_img_id").fadeToggle();
     };
 
     // This function connects to the APOD archive via an API, pulls the image data 
@@ -88,7 +88,8 @@ $(document).ready(function() {
     // These two function calls 1.) bring an image to the page when it loads and 
     // 2.) advance the images on a timer.
     imageAdvance();
-    setInterval(imageAdvance, 6000);
+
+    setInterval(imageAdvance, 10000);
 
 
     ////////////////////////////
@@ -96,12 +97,28 @@ $(document).ready(function() {
     ////////////////////////////
 
     $("#nextImage").click(imageAdvance);
+
     $("#previousImage").click(function(event) {
         $("#apod_img_id").fadeToggle();
-        console.log("Click Previous");
-        dateCounter = dateCounter - 2;
-        console.log(dateArray[dateCounter - 2]);
+        // The counter reduces by two here because it advances after the image loads. 
+        // The "previous" click needs the counter to bypass the inactive counter advance 
+        // and get to counter number for the prior photo.
+        dateCounter = dateCounter - 2; 
         grabImage();
+    });
+
+    // These two listeners reveal and hide the text accompanying each image
+    $("#apod_img_id").mouseenter(function(event) {
+        $("#apod_explaination").removeClass("hidden");
+        $("#copyright").removeClass("hidden");
+        $("#apod_img_id").addClass("opacity");
+        console.log("over!");
+    });
+
+    $("#apod_img_id").mouseleave(function(event) {
+        $("#apod_explaination").addClass("hidden");
+        $("#copyright").addClass("hidden");
+        $("#apod_img_id").removeClass("opacity");
     });
 });
 

@@ -3,19 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Slide Show</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
     <div id="apiData">
-        <img id="apod_img_id" width="250px"/>
-        <iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
-        <p id="copyright"></p>
         <h3 id="apod_title"></h3>
-        <p id="apod_explaination"></p>
+        <img id="apod_img_id">
+        <iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
+        <p id="apod_explaination" class="hidden"></p>
+        <p id="copyright" class="hidden"></p>
         <br/>
     </div>
     <div id="controls">
-        <button id="previousImage">Previous Image</button>
-        <button id="nextImage">Next Image</button>
+        <img src="images/leftChevron.jpeg" alt="Left Arrow" height="60px" width="60px" id="previousImage">
+        <img src="images/rightChevron.jpg" alt="Right Arrow" height="60px" width="60px" id="nextImage">
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/main.js"></script>

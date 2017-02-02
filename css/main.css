@@ -1,0 +1,59 @@
+body{
+	background-color: black;
+	text-align: center;
+	width: 100%;
+}
+
+#apiData{
+	width: 90%;
+	margin: 0 auto;
+}
+
+#apod_img_id {
+	height: 550px;
+	width: 550px;
+	overflow: hidden;
+}
+
+.opacity {
+	opacity: 0.4;
+}
+
+#apod_explaination {
+	color: white;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+#apod_explaination {
+	position: absolute;
+	top: 65%;
+	color: white;
+	left: 10%;
+	width: 60%;
+}
+
+#copyright {
+	position: absolute;
+	top: 60%;
+	width: 75%;
+	left: 10%;
+	color: white;
+}
+
+#previousImage {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+}
+
+#nextImage {
+	position: absolute;
+	top: 50%;
+	right: 10%;
+}
