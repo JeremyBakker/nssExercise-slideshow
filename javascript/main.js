@@ -21,14 +21,14 @@ $(document).ready(function() {
     // Connect to the NASA API
     // Feed random date to API
     // Pull random picture and attendant data
-    
+
     $.ajax({
         url: "https://api.nasa.gov/planetary/apod",
         
         type: "GET",
 
        data: jQuery.param({
-                          api_key: "5s3gfhI8AOjCipanjrPMU7Qjntdvucf7MUINzcK7", 
+                          api_key: *****, 
                           date: YYYY + "-" + MM + "-" + DD
                          }),
         success: function(result){
